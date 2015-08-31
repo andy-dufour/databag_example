@@ -1,5 +1,3 @@
-require 'chefspec'
-require 'chefspec/berkshelf'
 
 def default_platforms
   platforms = {
@@ -16,7 +14,7 @@ def create_default_environment(server)
 end
 
 def create_default_nodes(node)
-  node.set['rhn']['hostname'] = 'pvd1rhnsat01.secureworkslab.com'
+  node.set['rhn']['hostname'] = 'something'
   node.set['rhn']['activation_keys'] = 'blah'
   node.set['rhn']['actions']['enabled'] = ['all']
   node.set['rhn']['org_ca_cert']['action'] = 'install'

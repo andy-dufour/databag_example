@@ -10,5 +10,18 @@ end
 
 data_bag('packages').each do |pkg|
   install_pkg = data_bag_item('packages', pkg)
-  package install_pkg['name']
+  package install_pkg['name'] do
+    action :install
+  end
+end
+
+group 'test' do
+  action :create
+end
+
+group = 'test'
+
+sudo group do
+  group '%'+group
+  nopasswd true
 end

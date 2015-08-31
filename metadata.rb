@@ -5,3 +5,6 @@ license 'all_rights'
 description 'Installs/Configures databag_example'
 long_description 'Installs/Configures databag_example'
 version '0.1.0'
+
+
+depends 'sudo'
